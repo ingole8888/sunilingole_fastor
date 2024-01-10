@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import LoginPage from './Pages/LoginPage';
+import OtpVerificationPage from './Pages/OtpVerificationPage';
+import ProductPage from './Pages/ProductPage';
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handleLogin = (mobileNumber) => {
+    setCurrentPage(2);
+  };
+
+  const handleVerify = (otp) => {
+    setCurrentPage(localStorage.getItem('myCount'));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {currentPage === 1 && <LoginPage onLogin={handleLogin} />}
+      {currentPage === 2 && <OtpVerificationPage onVerify={handleVerify} />}
+      {currentPage === 3 && <ProductPage />}
     </div>
   );
-}
+};
 
 export default App;

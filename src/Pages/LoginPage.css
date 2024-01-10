@@ -1,0 +1,75 @@
+.login-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 25%;
+    padding-bottom: 17rem;
+  }
+  
+  .top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .time-and-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .current-time {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .icons {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .main-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+
+  input[type="tel"]:hover {
+    border-color: #007bff;
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 4.6rem 0.5rem 4.6rem;
+    background-color: #FF6D6A;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #FF6D6A; 
+  }
+  
